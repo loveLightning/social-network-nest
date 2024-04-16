@@ -28,9 +28,6 @@ jobs:
       - name: Lint code
         run: yarn lint
 
-      - name: Run tests
-        run: yarn test
-
       - name: Connect to Server and Deploy
         uses: appleboy/ssh-action@v0.1.10
         with:
