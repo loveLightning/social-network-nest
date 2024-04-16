@@ -19,11 +19,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Build and Package Docker Image
-        run: |
-          docker build --target prod -t aguirresabino/app .
-          docker save aguirresabino/app | gzip > app.tgz
-
       - name: Connect to Server and Deploy
         uses: appleboy/ssh-action@v0.1.10
         with:
