@@ -41,7 +41,7 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /server
+            cd /app
             tar -xzf app.tgz
             docker load -i app.tgz
             docker compose up --detach --remove-orphans --wait
